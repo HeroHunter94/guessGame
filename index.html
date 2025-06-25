@@ -58,8 +58,8 @@ En cada caso (frío, tibio, caliente o ganador) el programa deberá tener una im
         function reset(){
             random = Math.floor(Math.random() *500)+1;
             counter = 0;
-            RESET.style.display = "none";
-            GUESS.style.display = "block";
+            RESET.disabled = true;
+            GUESS.disabled = false;
             document.getElementById("output").innerHTML = "";
             console.log(random, counter);
 
@@ -94,8 +94,8 @@ En cada caso (frío, tibio, caliente o ganador) el programa deberá tener una im
             } else {
                 document.getElementById("output").innerHTML = "You got it boy in " + counter + " tries";
                 document.body.style.backgroundImage = `url('${ROUTE + "correct.jpg"}')`;
-                GUESS.style.display = "none";
-                RESET.style.display = "block";
+                GUESS.disabled = true;
+                RESET.disabled = false;
 
             }
             
